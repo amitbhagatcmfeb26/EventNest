@@ -1,1 +1,10 @@
-       console.log("PRAGYA FINAL CHANGE 999");
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send("Server running");
+});
+
+app.listen(3000, () => {
+  console.log("Server started");
+});
