@@ -1,9 +1,10 @@
-import React from 'react'
+const express = require('express');
+const app = express();
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+app.get('/', (req, res) => {
+  res.send("Server running");
+});
 
-export default index
+app.listen(3000, () => {
+  console.log("Server started");
+});
